@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Users API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="back"></div>
+    
+    <div id="content">
+        <h1> Credit Users API </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Path</th>
+                    <th>Required fields</th>
+                    <th>Optional fields</th>
+                    <th>Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>POST</td>
+                    <td>{URL}/users/register</td>
+                    <td>email,password,confirm_password</td>
+                    <td>name, city, phone, place, state, country, age, Avatar</td>
+                    <td>Registered Users Data</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>{URL}/users/login</td>
+                    <td>phone,password</td>
+                    <td>-</td>
+                    <td>Bearer Auth Token</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>{URL}/users/update/:id</td>
+                    <td>-</td>
+                    <td>email, name, city, phone, place, state, country, age, Avatar</td>
+                    <td>Updated Data of User</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>{URL}/profile/:id</td>
+                    <td>id as Param</td>
+                    <td>-</td>
+                    <td>Requested users Data</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>{URL}/all</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>All Users Data</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>{URL}/uploadCSV</td>
+                    <td>CSV File as file</td>
+                    <td>-</td>
+                    <td>All Users created from this file</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="footer">
+        © 2021 TheCreditAPI
+        
+    </div>
+
+</body>
+</html>
